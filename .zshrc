@@ -78,7 +78,11 @@ eval "$(tmuxifier init -)"
 
 source <(fzf --zsh)
 
+fzfp_command=
+
 # Aliases
 alias ls='eza --icons'
 alias ll='eza -l --icons'
 alias lt='eza -a --tree --level=1 --icons'
+alias cat='bat'
+alias fzfp='fzf --preview "bat --style=numbers --color=always --line-range=:500 {}"'
