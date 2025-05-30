@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
-export PATH=${PATH}:`go env GOPATH`/bin
+export PATH=${HOME}/.tmuxifier/bin:$HOME/.local/bin:/usr/local/bin:`go env GOPATH`/bin:$PATH:
 export EDITOR=/usr/bin/nvim
 
 ### Added by Zinit's installer
@@ -65,8 +64,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 setopt completealiases
-
-fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
 
 ### init starship.rs prompt
 eval "$(starship init zsh)"
