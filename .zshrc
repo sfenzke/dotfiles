@@ -1,3 +1,5 @@
+export SNAP_PAC_GRUB_ASYNC=true
+
 # If you come from bash you might have to change your $PATH.
 export PATH=${HOME}/.tmuxifier/bin:$HOME/.local/bin:/usr/local/bin:`go env GOPATH`/bin:$PATH:
 export EDITOR=/usr/bin/nvim
@@ -68,9 +70,6 @@ setopt completealiases
 ### init starship.rs prompt
 eval "$(starship init zsh)"
 
-### tmuxifier init
-eval "$(tmuxifier init -)"
-
 ### FZF integration
 
 source <(fzf --zsh)
@@ -83,3 +82,9 @@ alias ll='eza -l --icons'
 alias lt='eza -a --tree --level=1 --icons'
 alias cat='bat'
 alias fzfp='fzf --preview "bat --style=numbers --color=always --line-range=:500 {}"'
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/sfenzke/.dart-cli-completion/zsh-config.zsh ]] && . /home/sfenzke/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
